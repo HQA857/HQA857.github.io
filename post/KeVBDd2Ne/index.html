@@ -1,0 +1,602 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gridea</title>
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://hqa857.github.io/favicon.ico?v=1615387632003">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://hqa857.github.io/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://hqa857.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://hqa857.github.io/images/avatar.png?v=1615387632003" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li><a href="#linux%E7%B3%BB%E7%BB%9F">Linux系统</a></li>
+<li><a href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84">目录结构</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">常用命令</a>
+<ul>
+<li><a href="#%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86">目录管理</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E5%B1%9E%E6%80%A7">基本属性</a></li>
+<li><a href="#%E6%96%87%E4%BB%B6%E5%91%BD%E4%BB%A4">文件命令</a></li>
+<li><a href="#%E9%93%BE%E6%8E%A5">链接</a></li>
+<li><a href="#vim%E7%BC%96%E8%BE%91%E5%99%A8">Vim编辑器</a></li>
+<li><a href="#%E7%94%A8%E6%88%B7">用户</a></li>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">进程管理</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://hqa857.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">Linux</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-03-10 / 6 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h1 id="linux系统">Linux系统</h1>
+<p>Linwux是一套免费使用和自由传播的Unix操作系统,是一个基于POSIX(可移植操作系统借口)和Unix的多用户,多任务,多线程和多CPU的曹祖欧系统</p>
+<h1 id="目录结构">目录结构</h1>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>/</strong></td>
+<td><strong>根目录</strong></td>
+</tr>
+<tr>
+<td>/bin</td>
+<td>村饭的是Linux时使用的一些核心文件</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>存放Linux的外部设备</td>
+</tr>
+<tr>
+<td><strong>/etc</strong></td>
+<td><strong>存放所有的系统管理所需的配置文件和子目录</strong></td>
+</tr>
+<tr>
+<td><strong>/home</strong></td>
+<td><strong>用户的主目录,每个用于都有自己的目录</strong></td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>存放系统最基本的动态连接共享库</td>
+</tr>
+<tr>
+<td>/lost+found</td>
+<td>当系统非法关机后,存放一些文件</td>
+</tr>
+<tr>
+<td>/media</td>
+<td>自动识别一些设备</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>系统提供该目录是为了让用户临时挂载别的系统文件</td>
+</tr>
+<tr>
+<td><strong>/opt</strong></td>
+<td><strong>给主机额外安装软件摆放的目录</strong></td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>这是一个虚拟目录,他是系统内存的映射</td>
+</tr>
+<tr>
+<td><strong>/root</strong></td>
+<td><strong>系统管理员的目录</strong></td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>存放系统管理员使用的管理程序</td>
+</tr>
+<tr>
+<td>/srv</td>
+<td>存放一些服务启动之后需要提取的数据</td>
+</tr>
+<tr>
+<td>/sys</td>
+<td>2.6内核中出现的文件系统sysfs</td>
+</tr>
+<tr>
+<td><strong>/tmp</strong></td>
+<td><strong>用来存放临时文件的</strong></td>
+</tr>
+<tr>
+<td><strong>/usr</strong></td>
+<td><strong>用户很多程序和文件都放在这个目录下</strong></td>
+</tr>
+<tr>
+<td>/usr/bin</td>
+<td>系统用户使用的应用程序</td>
+</tr>
+<tr>
+<td>/usr/sbin</td>
+<td>超级用户使用的比较拥挤的管理程序和系统守护程序</td>
+</tr>
+<tr>
+<td>/usr/src</td>
+<td>内核源代码存放目录</td>
+</tr>
+<tr>
+<td><strong>/var</strong></td>
+<td><strong>这个目录存放不断扩充的东西</strong></td>
+</tr>
+<tr>
+<td>/run</td>
+<td>临时的文件系统</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常用命令">常用命令</h1>
+<h2 id="目录管理">目录管理</h2>
+<p>绝对路径 :从根目录开始</p>
+<p>相对路径 :从当前文件目录开始</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cd</td>
+<td>切换目录<br> .. 代表上一级目录<br>./ 代表当前目录<br>/ 代表根目录</td>
+<td>cd /</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>列出当前目录下所有文件和文件夹<br>-a 查看所有文件,包含隐藏文件<br>-l 列出所有文件,包含文件属性和权限,没有影藏文件</td>
+<td>ls -a</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>返回当前用户所有目录</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建目录<br>-p 创建层级目录</td>
+<td>mkdir test</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除目录<br>-p 代表强制删除</td>
+<td>rmdir test</td>
+</tr>
+<tr>
+<td>cp</td>
+<td>复制目录</td>
+<td>cp test .txt ./test</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除文件/目录<br>-f 忽略不存在的,强制删除<br>-r 递归删除目录</td>
+<td>rm test.txt</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>移动文件或目录<br>-f 强制<br>-u 只替换跟新过的文件</td>
+<td>mv test ./test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="基本属性">基本属性</h2>
+<p>Linux系统是一个典型的多用户系统,不同用户处于不同的地位,拥有不同的权限.为了保护系统安全性.Linux对不同的用户访问同一文件的权限做了不同的规定</p>
+<figure data-type="image" tabindex="1"><img src="https://hqa857.github.io/post-images/1615379309424.png" alt="" loading="lazy"></figure>
+<p>第一个字符</p>
+<ul>
+<li><strong>d 代表是目录</strong></li>
+<li><strong>- 代表是文件</strong></li>
+<li><strong>l 代表连接文档</strong></li>
+<li>b 代表装置文件里面可随机存取的装置</li>
+<li>c 代表装配文件里串行端口设备</li>
+</ul>
+<p>接下来的字符3个为一组</p>
+<ul>
+<li>r 代表可读</li>
+<li>w 代表可写</li>
+<li>x 代表可执行</li>
+<li>- 代表没有权限</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://hqa857.github.io/post-images/1615379316112.png" alt="" loading="lazy"></figure>
+<p>设置文件属性的两种方式:数值和符号</p>
+<ul>
+<li>r : 4</li>
+<li>w : 2</li>
+<li>x : 1</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chmod 777 filename</td>
+<td>所有用户获取读写执行</td>
+</tr>
+<tr>
+<td>chmod rwxrwxrwx filename</td>
+<td>所有用户获取读写执行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="文件命令">文件命令</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cat</td>
+<td>从第一行开始显示文件内容</td>
+</tr>
+<tr>
+<td>tac</td>
+<td>从最后一行开始倒着显示内容</td>
+</tr>
+<tr>
+<td>nl</td>
+<td>显示的时候,输出行号</td>
+</tr>
+<tr>
+<td>more</td>
+<td>一页一页显示文件内容<br>空格代表翻页,回车代表向下看一行</td>
+</tr>
+<tr>
+<td>less</td>
+<td>一页一页显示,可以向前看<br>空格代表翻页,上下键代表上下看一行,q代表退出<br>在查看的时候,使用 /搜索字符 来搜索指定内容</td>
+</tr>
+<tr>
+<td>head</td>
+<td>只看头几行<br>通过-n 来控制几行</td>
+</tr>
+<tr>
+<td>tail</td>
+<td>只看尾几行</td>
+</tr>
+<tr>
+<td>tar</td>
+<td>打包或解压<br>tar -zxvf 压缩文件.tar.gz  解压<br>tar -zvvf 压缩文件名.tar.gz 源文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="链接">链接</h2>
+<p>链接分为硬链接和软连接</p>
+<ul>
+<li>硬链接 :b是a的硬链接,他们指向的都是同一个文件,如果a删除了,b还是可以访问到原始数据</li>
+<li>软链接 :类似快捷方式,b是a的软链接,如果a删除了,b也就不能用了</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ln</td>
+<td>创建硬链接</td>
+<td>ln a b</td>
+</tr>
+<tr>
+<td>ln -s</td>
+<td>创建软链接</td>
+<td>ln -s a b</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vim编辑器">Vim编辑器</h2>
+<p>vim编辑器是vi发展出来的文本编辑器,如果文件存在,就修改该文件,不存在,就创建</p>
+<p>分为命令模式,输入模式和底线命令模式</p>
+<ul>
+<li>命令模式 :用户启动vi/vim,进入命令模式
+<ul>
+<li>i :切换输入模式</li>
+<li>: 切换底线模式</li>
+<li>/ 需要查找的字符串 :查找字符串</li>
+</ul>
+</li>
+<li>输入模式
+<ul>
+<li>回车键 :换行</li>
+<li>删除键 :删除</li>
+<li>home/end键 :光标移动到首行或尾行</li>
+<li>pgup/pgdn键 :撒很难过I型啊翻页</li>
+<li>esc键 :退出输入模式,进入命令模式</li>
+</ul>
+</li>
+<li>底线模式
+<ul>
+<li>q :退出程序,!代表强制退出</li>
+<li>w :保存文件</li>
+<li>:set nu :设置行号</li>
+</ul>
+</li>
+</ul>
+<h2 id="用户">用户</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>useradd</td>
+<td>创建用户名<br>-m 自动创建用户的主目录<br>-G 分配组</td>
+<td>useradd -m test</td>
+</tr>
+<tr>
+<td>userdel</td>
+<td>删除用户<br>-r 自动删除用户的目录</td>
+<td>userdel -r test</td>
+</tr>
+<tr>
+<td>su</td>
+<td>切换用户</td>
+<td>su root</td>
+</tr>
+<tr>
+<td>password</td>
+<td>设置密码</td>
+<td>password test</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>锁定账户<br>-l 锁定用户<br>-d 清空用户密码<br>-u 解锁用户</td>
+<td>passwd -l test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="进程管理">进程管理</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ps</td>
+<td>查看当前系统中正在执行的信息<br>-a 显示终端运行的所有的进程信息<br>-u 以用户的信息显示进程<br>-x 显示后台进程的参数</td>
+<td>ps -a</td>
+</tr>
+<tr>
+<td>|</td>
+<td>管道符,将前面的结果当做后面的参数传入</td>
+<td>ps -aux | grep mysql</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>查找文件中符合条件的字符串</td>
+<td>ps -aux | grep mysql</td>
+</tr>
+<tr>
+<td>pstree</td>
+<td>查看进程树<br>-p 显示父id<br>-u 显示用户组</td>
+<td>pstree -pu</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>结束进程</td>
+<td>kill -9 3323</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://hqa857.github.io/tag/5tE3PsY_6/">
+            <span class="flex-auto">Linux</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+
+          
+            <div class="next-post">
+              <a href="https://hqa857.github.io/post/kzYCagq8V/">
+                <h3 class="post-title">
+                  安装虚拟机
+                  <i class="ri-arrow-right-line"></i>
+                </h3>
+              </a>
+            </div>
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://hqa857.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

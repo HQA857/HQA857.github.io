@@ -1,0 +1,368 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gridea</title>
+<meta name="description" content="温故而知新" />
+<link rel="shortcut icon" href="https://hqa857.github.io/favicon.ico?v=1615387632003">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+
+<link rel="stylesheet" href="https://hqa857.github.io/styles/main.css">
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main px-4 flex flex-col lg:flex-row">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="lg:sticky top-0">
+    <div class="sidebar-content">
+      <div class="flex lg:block p-4 lg:px-0 items-center fixed lg:static lg:block top-0 right-0 left-0 bg-white z-50">
+        <i class="ri-menu-2-line lg:mt-4 text-2xl cursor-pointer animated fadeIn" onclick="openMenu()"></i>
+        <a href="https://hqa857.github.io">
+          <img class="animated fadeInLeft avatar rounded-lg mx-4 lg:mt-32 lg:mx-0 mt-0 lg:w-24 lg:h-24 w-12 w-12" src="https://hqa857.github.io/images/avatar.png?v=1615387632003" alt="">
+        </a>
+        <h1 class="animated fadeInLeft lg:text-4xl font-extrabold lg:mt-8 mt-0 text-xl" style="animation-delay: 0.2s">Gridea</h1>
+      </div>
+      
+        <div class="animated fadeInLeft" style="animation-delay: 0.4s">
+          <p class="my-4 text-gray-600 font-light hidden lg:block">
+            文章目录
+          </p>
+          <div class="toc-container hidden lg:block">
+            <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#window%E4%B8%8B%E5%AE%89%E8%A3%85%E8%99%9A%E6%8B%9F%E6%9C%BA">window下安装虚拟机</a>
+<ul>
+<li><a href="#%E4%B8%8B%E8%BD%BD">下载</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85">安装</a></li>
+<li><a href="#%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE">查看网络配置</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AE%89%E8%A3%85centos7">安装CentOs7</a>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E7%B3%BB%E7%BB%9F">安装系统</a></li>
+<li><a href="#%E5%AF%BC%E5%85%A5%E9%95%9C%E5%83%8F%E6%96%87%E4%BB%B6">导入镜像文件</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E9%98%B2%E7%81%AB%E5%A2%99">配置防火墙</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81ip">配置静态ip</a></li>
+<li><a href="#%E4%B8%8B%E8%BD%BDlinux%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7">下载linux常用工具</a></li>
+</ul>
+</li>
+<li><a href="#%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85">开发软件安装</a>
+<ul>
+<li><a href="#jdk%E5%AE%89%E8%A3%85">JDK安装</a></li>
+<li><a href="#tomcat%E5%AE%89%E8%A3%85">tomcat安装</a></li>
+<li><a href="#docker%E5%AE%89%E8%A3%85">docker安装</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="menu-container">
+  <i class="ri-arrow-left-line text-2xl cursor-pointer animated fadeIn close-menu-btn" onclick="closeMenu()"></i>
+  <div>
+    
+      
+        <a href="/" class="menu" style="animation-delay: 0s">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu" style="animation-delay: 0.2s">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu" style="animation-delay: 0.4s">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu" style="animation-delay: 0.6000000000000001s">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="site-footer">
+    <div class="py-4 text-gray-700">Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a></div>
+    <a class="rss" href="https://hqa857.github.io/atom.xml" target="_blank">RSS</a>
+  </div>
+</div>
+<div class="mask" onclick="closeMenu()">
+</div>
+      <div class="content-wrapper py-32 lg:p-8 lg:w-3/4 post-detail animated fadeIn">
+        <h1 class="text-3xl font-bold lg:mt-16">安装虚拟机</h1>
+        <div class="text-sm text-gray-700 lg:my-8">
+          2021-03-10 / 3 min read
+        </div>
+        
+        <div class="post-content yue">
+          <h2 id="window下安装虚拟机">window下安装虚拟机</h2>
+<h3 id="下载">下载</h3>
+<p>链接：https://pan.baidu.com/s/182UQNDcWtAE8KhQvs-ZJ7g<br>
+提取码：kzs5</p>
+<p>如果失效联系博主 :v k37752</p>
+<h3 id="安装">安装</h3>
+<p><img src="https://hqa857.github.io/post-images/1615377821984.png" alt="" loading="lazy"><img src=".%5Cimg%5C1615043271448.png" alt="1615043271448" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://hqa857.github.io/post-images/1615377831503.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://hqa857.github.io/post-images/1615377838966.png" alt="" loading="lazy"></figure>
+<p><img src="https://hqa857.github.io/post-images/1615377854076.png" alt="" loading="lazy"><img src=".%5Cimg%5C1615043583586.png" alt="1615043583586" loading="lazy"></p>
+<p>密钥</p>
+<pre><code>YG5H2-ANZ0H-M8ERY-TXZZZ-YKRV8
+UG5J2-0ME12-M89WY-NPWXX-WQH88
+UA5DR-2ZD4H-089FY-6YQ5T-YPRX6
+GA590-86Y05-4806Y-X4PEE-ZV8E0
+ZF582-0NW5N-H8D2P-0XZEE-Z22VA
+YA18K-0WY8P-H85DY-L4NZG-X7RAD
+</code></pre>
+<h3 id="查看网络配置">查看网络配置</h3>
+<p>编辑-&gt;虚拟网络编辑器</p>
+<p><img src="https://hqa857.github.io/post-images/1615377920359.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615377926447.png" alt="" loading="lazy"></p>
+<h2 id="安装centos7">安装CentOs7</h2>
+<h3 id="安装系统">安装系统</h3>
+<p><img src="https://hqa857.github.io/post-images/1615377954405.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378037853.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378046348.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378052321.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378107548.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378115486.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378121701.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378190235.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378196284.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378205439.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378220401.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378213150.png" alt="" loading="lazy"></p>
+<p><img src="https://hqa857.github.io/post-images/1615378309482.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378322265.png" alt="" loading="lazy"></p>
+<h3 id="导入镜像文件">导入镜像文件</h3>
+<p><img src="https://hqa857.github.io/post-images/1615378346703.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378356195.png" alt="" loading="lazy"></p>
+<p>账号root 密码123456</p>
+<h3 id="配置防火墙">配置防火墙</h3>
+<pre><code>//临时关闭
+systemctl stop firewalld.service
+//禁止开启启动
+systemctl disable firewalld.service
+</code></pre>
+<h3 id="配置静态ip">配置静态ip</h3>
+<pre><code>//编写网卡配置
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://hqa857.github.io/post-images/1615378399439.png" alt="" loading="lazy"></figure>
+<p>重启服务</p>
+<pre><code>systemctl restart network
+</code></pre>
+<h3 id="下载linux常用工具">下载linux常用工具</h3>
+<pre><code>//跟新yum包
+sudo yum update
+//安装软件包
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+//配置yum源
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+//yum源下载一些常用工具
+yum -y install unzip lrzsz net-tools curl vim
+</code></pre>
+<h2 id="开发软件安装">开发软件安装</h2>
+<h3 id="jdk安装">JDK安装</h3>
+<p>创建/usr/lib/java</p>
+<pre><code>cd /usr/lib
+mkdir java
+cd java
+</code></pre>
+<p>将文件传入到该目录下<br>
+查看是否有安装java</p>
+<pre><code>rpm -qa|grep jdk
+</code></pre>
+<p>下载</p>
+<pre><code>rpm -e --nodeps jdkxxx
+</code></pre>
+<p>安装</p>
+<pre><code>rpm -ivh jdk-8u221-linux-x64.rpm 
+</code></pre>
+<p>配置环境,jdk默认安装在/usr/java/jdkxxx</p>
+<pre><code>vim /etc/profile
+</code></pre>
+<pre><code>export JAVA_HOME=/usr/java/jdk1.8.0_211
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
+export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
+export PATH=$PATH:${JAVA_PATH}
+</code></pre>
+<h3 id="tomcat安装">tomcat安装</h3>
+<p>上传tomcat安装包到/usr/lib/java</p>
+<p>解压tomcat</p>
+<pre><code>tar -zxvd tomcat
+</code></pre>
+<p>进入tomcat/bin目录下,开启</p>
+<pre><code>cd tomcatcd apache-tomcat-7.0.108
+./startup.sh 
+</code></pre>
+<p>关闭</p>
+<pre><code>./shutdown.sh
+</code></pre>
+<h3 id="docker安装">docker安装</h3>
+<p>更新yum包</p>
+<pre><code>sudo yum update
+</code></pre>
+<p>安装软件包</p>
+<pre><code>sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+</code></pre>
+<p>配置yum源</p>
+<pre><code>sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+<p>查看docker版本</p>
+<pre><code>yum list docker-ce --showduplicates | sort -r
+</code></pre>
+<p>安装docker</p>
+<pre><code>sudo yum -y install docker-ce-18.03.1.ce-1.el7.centos
+</code></pre>
+<p>开启</p>
+<pre><code>sudo systemctl start docker
+</code></pre>
+
+        </div>
+
+        
+          <a class="animated fadeInUp p-2 items-center text-sm text-gray-700 border hover:bg-gray-300 leading-none rounded-full flex lg:inline-flex m-4 " href="https://hqa857.github.io/tag/sxjw7uFBe/">
+            <span class="flex-auto">虚拟机</span>
+          </a>
+        
+
+
+        <div class="flex justify-between py-8">
+          
+            <div class="prev-post">
+              <a href="https://hqa857.github.io/post/KeVBDd2Ne/">
+                <h3 class="post-title">
+                  <i class="ri-arrow-left-line"></i>
+                  Linux
+                </h3>
+              </a>
+            </div>
+          
+
+          
+        </div>
+
+        
+
+      </div>
+    </div>
+
+    <script src="https://hqa857.github.io/media/prism.js"></script>  
+<script>
+
+Prism.highlightAll()
+let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+// This should probably be throttled.
+// Especially because it triggers during smooth scrolling.
+// https://lodash.com/docs/4.17.10#throttle
+// You could do like...
+// window.addEventListener("scroll", () => {
+//    _.throttle(doThatStuff, 100);
+// });
+// Only not doing it here to keep this Pen dependency-free.
+
+window.addEventListener("scroll", event => {
+  let fromTop = window.scrollY;
+
+  mainNavLinks.forEach((link, index) => {
+    let section = document.getElementById(decodeURI(link.hash).substring(1));
+    let nextSection = null
+    if (mainNavLinks[index + 1]) {
+      nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+    }
+    if (section.offsetTop <= fromTop) {
+      if (nextSection) {
+        if (nextSection.offsetTop > fromTop) {
+          link.classList.add("current");
+        } else {
+          link.classList.remove("current");    
+        }
+      } else {
+        link.classList.add("current");
+      }
+    } else {
+      link.classList.remove("current");
+    }
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyImages = [].slice.call(document.querySelectorAll(".post-feature-image.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target
+          lazyImage.style.backgroundImage = `url(${lazyImage.dataset.bg})`
+          lazyImage.classList.remove("lazy")
+          lazyImageObserver.unobserve(lazyImage)
+        }
+      });
+    });
+
+    lazyImages.forEach(function(lazyImage) {
+      lazyImageObserver.observe(lazyImage)
+    })
+  } else {
+    // Possibly fall back to a more compatible method here
+  }
+});
+
+const menuContainer = document.querySelector('.menu-container')
+const menus = document.querySelectorAll('.menu-container .menu')
+const mask = document.querySelector('.mask')
+const contentWrapper = document.querySelector('.content-wrapper')
+const latestArticle = document.querySelector('.latest-article')
+const readMore = document.querySelector('.read-more')
+const indexPage = document.querySelector('.index-page')
+
+const isHome = location.pathname === '/'
+if (latestArticle) {
+  latestArticle.style.display = isHome ? 'block' : 'none'
+  readMore.style.display = isHome ? 'block' : 'none'
+  indexPage.style.display = isHome ? 'none' : 'block'
+}
+
+const openMenu = () => {
+  menuContainer.classList.add('open')
+  menus.forEach(menu => {
+    menu.classList.add('animated', 'fadeInLeft')
+  })
+  mask.classList.add('open')
+  contentWrapper.classList.add('is-second')
+}
+
+const closeMenu = () => {
+  menuContainer.classList.remove('open')
+  menus.forEach(menu => {
+    menu.classList.remove('animated', 'fadeInLeft')
+  })
+  mask.classList.remove('open')
+  contentWrapper.classList.remove('is-second')
+}
+</script>
+  
+  </body>
+</html>

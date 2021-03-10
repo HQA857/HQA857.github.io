@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://hqa857.github.io</id>
+    <title>Gridea</title>
+    <updated>2021-03-10T18:40:24.580Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://hqa857.github.io"/>
+    <link rel="self" href="https://hqa857.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://hqa857.github.io/images/avatar.png</logo>
+    <icon>https://hqa857.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Linux]]></title>
+        <id>https://hqa857.github.io/post/KeVBDd2Ne/</id>
+        <link href="https://hqa857.github.io/post/KeVBDd2Ne/">
+        </link>
+        <updated>2021-03-10T12:17:58.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="linux系统">Linux系统</h1>
+<p>Linwux是一套免费使用和自由传播的Unix操作系统,是一个基于POSIX(可移植操作系统借口)和Unix的多用户,多任务,多线程和多CPU的曹祖欧系统</p>
+<h1 id="目录结构">目录结构</h1>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>/</strong></td>
+<td><strong>根目录</strong></td>
+</tr>
+<tr>
+<td>/bin</td>
+<td>村饭的是Linux时使用的一些核心文件</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>存放Linux的外部设备</td>
+</tr>
+<tr>
+<td><strong>/etc</strong></td>
+<td><strong>存放所有的系统管理所需的配置文件和子目录</strong></td>
+</tr>
+<tr>
+<td><strong>/home</strong></td>
+<td><strong>用户的主目录,每个用于都有自己的目录</strong></td>
+</tr>
+<tr>
+<td>/lib</td>
+<td>存放系统最基本的动态连接共享库</td>
+</tr>
+<tr>
+<td>/lost+found</td>
+<td>当系统非法关机后,存放一些文件</td>
+</tr>
+<tr>
+<td>/media</td>
+<td>自动识别一些设备</td>
+</tr>
+<tr>
+<td>/mnt</td>
+<td>系统提供该目录是为了让用户临时挂载别的系统文件</td>
+</tr>
+<tr>
+<td><strong>/opt</strong></td>
+<td><strong>给主机额外安装软件摆放的目录</strong></td>
+</tr>
+<tr>
+<td>/proc</td>
+<td>这是一个虚拟目录,他是系统内存的映射</td>
+</tr>
+<tr>
+<td><strong>/root</strong></td>
+<td><strong>系统管理员的目录</strong></td>
+</tr>
+<tr>
+<td>/sbin</td>
+<td>存放系统管理员使用的管理程序</td>
+</tr>
+<tr>
+<td>/srv</td>
+<td>存放一些服务启动之后需要提取的数据</td>
+</tr>
+<tr>
+<td>/sys</td>
+<td>2.6内核中出现的文件系统sysfs</td>
+</tr>
+<tr>
+<td><strong>/tmp</strong></td>
+<td><strong>用来存放临时文件的</strong></td>
+</tr>
+<tr>
+<td><strong>/usr</strong></td>
+<td><strong>用户很多程序和文件都放在这个目录下</strong></td>
+</tr>
+<tr>
+<td>/usr/bin</td>
+<td>系统用户使用的应用程序</td>
+</tr>
+<tr>
+<td>/usr/sbin</td>
+<td>超级用户使用的比较拥挤的管理程序和系统守护程序</td>
+</tr>
+<tr>
+<td>/usr/src</td>
+<td>内核源代码存放目录</td>
+</tr>
+<tr>
+<td><strong>/var</strong></td>
+<td><strong>这个目录存放不断扩充的东西</strong></td>
+</tr>
+<tr>
+<td>/run</td>
+<td>临时的文件系统</td>
+</tr>
+</tbody>
+</table>
+<h1 id="常用命令">常用命令</h1>
+<h2 id="目录管理">目录管理</h2>
+<p>绝对路径 :从根目录开始</p>
+<p>相对路径 :从当前文件目录开始</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cd</td>
+<td>切换目录<br> .. 代表上一级目录<br>./ 代表当前目录<br>/ 代表根目录</td>
+<td>cd /</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>列出当前目录下所有文件和文件夹<br>-a 查看所有文件,包含隐藏文件<br>-l 列出所有文件,包含文件属性和权限,没有影藏文件</td>
+<td>ls -a</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>返回当前用户所有目录</td>
+<td>pwd</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建目录<br>-p 创建层级目录</td>
+<td>mkdir test</td>
+</tr>
+<tr>
+<td>rmdir</td>
+<td>删除目录<br>-p 代表强制删除</td>
+<td>rmdir test</td>
+</tr>
+<tr>
+<td>cp</td>
+<td>复制目录</td>
+<td>cp test .txt ./test</td>
+</tr>
+<tr>
+<td>rm</td>
+<td>删除文件/目录<br>-f 忽略不存在的,强制删除<br>-r 递归删除目录</td>
+<td>rm test.txt</td>
+</tr>
+<tr>
+<td>mv</td>
+<td>移动文件或目录<br>-f 强制<br>-u 只替换跟新过的文件</td>
+<td>mv test ./test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="基本属性">基本属性</h2>
+<p>Linux系统是一个典型的多用户系统,不同用户处于不同的地位,拥有不同的权限.为了保护系统安全性.Linux对不同的用户访问同一文件的权限做了不同的规定</p>
+<figure data-type="image" tabindex="1"><img src="https://hqa857.github.io/post-images/1615379309424.png" alt="" loading="lazy"></figure>
+<p>第一个字符</p>
+<ul>
+<li><strong>d 代表是目录</strong></li>
+<li><strong>- 代表是文件</strong></li>
+<li><strong>l 代表连接文档</strong></li>
+<li>b 代表装置文件里面可随机存取的装置</li>
+<li>c 代表装配文件里串行端口设备</li>
+</ul>
+<p>接下来的字符3个为一组</p>
+<ul>
+<li>r 代表可读</li>
+<li>w 代表可写</li>
+<li>x 代表可执行</li>
+<li>- 代表没有权限</li>
+</ul>
+<figure data-type="image" tabindex="2"><img src="https://hqa857.github.io/post-images/1615379316112.png" alt="" loading="lazy"></figure>
+<p>设置文件属性的两种方式:数值和符号</p>
+<ul>
+<li>r : 4</li>
+<li>w : 2</li>
+<li>x : 1</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>chmod 777 filename</td>
+<td>所有用户获取读写执行</td>
+</tr>
+<tr>
+<td>chmod rwxrwxrwx filename</td>
+<td>所有用户获取读写执行</td>
+</tr>
+</tbody>
+</table>
+<h2 id="文件命令">文件命令</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cat</td>
+<td>从第一行开始显示文件内容</td>
+</tr>
+<tr>
+<td>tac</td>
+<td>从最后一行开始倒着显示内容</td>
+</tr>
+<tr>
+<td>nl</td>
+<td>显示的时候,输出行号</td>
+</tr>
+<tr>
+<td>more</td>
+<td>一页一页显示文件内容<br>空格代表翻页,回车代表向下看一行</td>
+</tr>
+<tr>
+<td>less</td>
+<td>一页一页显示,可以向前看<br>空格代表翻页,上下键代表上下看一行,q代表退出<br>在查看的时候,使用 /搜索字符 来搜索指定内容</td>
+</tr>
+<tr>
+<td>head</td>
+<td>只看头几行<br>通过-n 来控制几行</td>
+</tr>
+<tr>
+<td>tail</td>
+<td>只看尾几行</td>
+</tr>
+<tr>
+<td>tar</td>
+<td>打包或解压<br>tar -zxvf 压缩文件.tar.gz  解压<br>tar -zvvf 压缩文件名.tar.gz 源文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="链接">链接</h2>
+<p>链接分为硬链接和软连接</p>
+<ul>
+<li>硬链接 :b是a的硬链接,他们指向的都是同一个文件,如果a删除了,b还是可以访问到原始数据</li>
+<li>软链接 :类似快捷方式,b是a的软链接,如果a删除了,b也就不能用了</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ln</td>
+<td>创建硬链接</td>
+<td>ln a b</td>
+</tr>
+<tr>
+<td>ln -s</td>
+<td>创建软链接</td>
+<td>ln -s a b</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vim编辑器">Vim编辑器</h2>
+<p>vim编辑器是vi发展出来的文本编辑器,如果文件存在,就修改该文件,不存在,就创建</p>
+<p>分为命令模式,输入模式和底线命令模式</p>
+<ul>
+<li>命令模式 :用户启动vi/vim,进入命令模式
+<ul>
+<li>i :切换输入模式</li>
+<li>: 切换底线模式</li>
+<li>/ 需要查找的字符串 :查找字符串</li>
+</ul>
+</li>
+<li>输入模式
+<ul>
+<li>回车键 :换行</li>
+<li>删除键 :删除</li>
+<li>home/end键 :光标移动到首行或尾行</li>
+<li>pgup/pgdn键 :撒很难过I型啊翻页</li>
+<li>esc键 :退出输入模式,进入命令模式</li>
+</ul>
+</li>
+<li>底线模式
+<ul>
+<li>q :退出程序,!代表强制退出</li>
+<li>w :保存文件</li>
+<li>:set nu :设置行号</li>
+</ul>
+</li>
+</ul>
+<h2 id="用户">用户</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>useradd</td>
+<td>创建用户名<br>-m 自动创建用户的主目录<br>-G 分配组</td>
+<td>useradd -m test</td>
+</tr>
+<tr>
+<td>userdel</td>
+<td>删除用户<br>-r 自动删除用户的目录</td>
+<td>userdel -r test</td>
+</tr>
+<tr>
+<td>su</td>
+<td>切换用户</td>
+<td>su root</td>
+</tr>
+<tr>
+<td>password</td>
+<td>设置密码</td>
+<td>password test</td>
+</tr>
+<tr>
+<td>passwd</td>
+<td>锁定账户<br>-l 锁定用户<br>-d 清空用户密码<br>-u 解锁用户</td>
+<td>passwd -l test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="进程管理">进程管理</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ps</td>
+<td>查看当前系统中正在执行的信息<br>-a 显示终端运行的所有的进程信息<br>-u 以用户的信息显示进程<br>-x 显示后台进程的参数</td>
+<td>ps -a</td>
+</tr>
+<tr>
+<td>|</td>
+<td>管道符,将前面的结果当做后面的参数传入</td>
+<td>ps -aux | grep mysql</td>
+</tr>
+<tr>
+<td>grep</td>
+<td>查找文件中符合条件的字符串</td>
+<td>ps -aux | grep mysql</td>
+</tr>
+<tr>
+<td>pstree</td>
+<td>查看进程树<br>-p 显示父id<br>-u 显示用户组</td>
+<td>pstree -pu</td>
+</tr>
+<tr>
+<td>kill</td>
+<td>结束进程</td>
+<td>kill -9 3323</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[安装虚拟机]]></title>
+        <id>https://hqa857.github.io/post/kzYCagq8V/</id>
+        <link href="https://hqa857.github.io/post/kzYCagq8V/">
+        </link>
+        <updated>2021-03-10T12:01:54.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="window下安装虚拟机">window下安装虚拟机</h2>
+<h3 id="下载">下载</h3>
+<p>链接：https://pan.baidu.com/s/182UQNDcWtAE8KhQvs-ZJ7g<br>
+提取码：kzs5</p>
+<p>如果失效联系博主 :v k37752</p>
+<h3 id="安装">安装</h3>
+<p><img src="https://hqa857.github.io/post-images/1615377821984.png" alt="" loading="lazy"><img src=".%5Cimg%5C1615043271448.png" alt="1615043271448" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://hqa857.github.io/post-images/1615377831503.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://hqa857.github.io/post-images/1615377838966.png" alt="" loading="lazy"></figure>
+<p><img src="https://hqa857.github.io/post-images/1615377854076.png" alt="" loading="lazy"><img src=".%5Cimg%5C1615043583586.png" alt="1615043583586" loading="lazy"></p>
+<p>密钥</p>
+<pre><code>YG5H2-ANZ0H-M8ERY-TXZZZ-YKRV8
+UG5J2-0ME12-M89WY-NPWXX-WQH88
+UA5DR-2ZD4H-089FY-6YQ5T-YPRX6
+GA590-86Y05-4806Y-X4PEE-ZV8E0
+ZF582-0NW5N-H8D2P-0XZEE-Z22VA
+YA18K-0WY8P-H85DY-L4NZG-X7RAD
+</code></pre>
+<h3 id="查看网络配置">查看网络配置</h3>
+<p>编辑-&gt;虚拟网络编辑器</p>
+<p><img src="https://hqa857.github.io/post-images/1615377920359.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615377926447.png" alt="" loading="lazy"></p>
+<h2 id="安装centos7">安装CentOs7</h2>
+<h3 id="安装系统">安装系统</h3>
+<p><img src="https://hqa857.github.io/post-images/1615377954405.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378037853.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378046348.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378052321.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378107548.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378115486.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378121701.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378190235.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378196284.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378205439.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378220401.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378213150.png" alt="" loading="lazy"></p>
+<p><img src="https://hqa857.github.io/post-images/1615378309482.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378322265.png" alt="" loading="lazy"></p>
+<h3 id="导入镜像文件">导入镜像文件</h3>
+<p><img src="https://hqa857.github.io/post-images/1615378346703.png" alt="" loading="lazy"><br>
+<img src="https://hqa857.github.io/post-images/1615378356195.png" alt="" loading="lazy"></p>
+<p>账号root 密码123456</p>
+<h3 id="配置防火墙">配置防火墙</h3>
+<pre><code>//临时关闭
+systemctl stop firewalld.service
+//禁止开启启动
+systemctl disable firewalld.service
+</code></pre>
+<h3 id="配置静态ip">配置静态ip</h3>
+<pre><code>//编写网卡配置
+vi /etc/sysconfig/network-scripts/ifcfg-ens33
+</code></pre>
+<figure data-type="image" tabindex="3"><img src="https://hqa857.github.io/post-images/1615378399439.png" alt="" loading="lazy"></figure>
+<p>重启服务</p>
+<pre><code>systemctl restart network
+</code></pre>
+<h3 id="下载linux常用工具">下载linux常用工具</h3>
+<pre><code>//跟新yum包
+sudo yum update
+//安装软件包
+sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+//配置yum源
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+//yum源下载一些常用工具
+yum -y install unzip lrzsz net-tools curl vim
+</code></pre>
+<h2 id="开发软件安装">开发软件安装</h2>
+<h3 id="jdk安装">JDK安装</h3>
+<p>创建/usr/lib/java</p>
+<pre><code>cd /usr/lib
+mkdir java
+cd java
+</code></pre>
+<p>将文件传入到该目录下<br>
+查看是否有安装java</p>
+<pre><code>rpm -qa|grep jdk
+</code></pre>
+<p>下载</p>
+<pre><code>rpm -e --nodeps jdkxxx
+</code></pre>
+<p>安装</p>
+<pre><code>rpm -ivh jdk-8u221-linux-x64.rpm 
+</code></pre>
+<p>配置环境,jdk默认安装在/usr/java/jdkxxx</p>
+<pre><code>vim /etc/profile
+</code></pre>
+<pre><code>export JAVA_HOME=/usr/java/jdk1.8.0_211
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib:$CLASSPATH
+export JAVA_PATH=${JAVA_HOME}/bin:${JRE_HOME}/bin
+export PATH=$PATH:${JAVA_PATH}
+</code></pre>
+<h3 id="tomcat安装">tomcat安装</h3>
+<p>上传tomcat安装包到/usr/lib/java</p>
+<p>解压tomcat</p>
+<pre><code>tar -zxvd tomcat
+</code></pre>
+<p>进入tomcat/bin目录下,开启</p>
+<pre><code>cd tomcatcd apache-tomcat-7.0.108
+./startup.sh 
+</code></pre>
+<p>关闭</p>
+<pre><code>./shutdown.sh
+</code></pre>
+<h3 id="docker安装">docker安装</h3>
+<p>更新yum包</p>
+<pre><code>sudo yum update
+</code></pre>
+<p>安装软件包</p>
+<pre><code>sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+</code></pre>
+<p>配置yum源</p>
+<pre><code>sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+<p>查看docker版本</p>
+<pre><code>yum list docker-ce --showduplicates | sort -r
+</code></pre>
+<p>安装docker</p>
+<pre><code>sudo yum -y install docker-ce-18.03.1.ce-1.el7.centos
+</code></pre>
+<p>开启</p>
+<pre><code>sudo systemctl start docker
+</code></pre>
+]]></content>
+    </entry>
+</feed>
